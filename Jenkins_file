@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Perform Application Image Build'
 				sh "docker build -t amitbhattacharjee407-wq/bankingwebapp:${BUILD_NUMBER} ."
-				sh "docker tag loksaieta/bankingwebapp:${BUILD_NUMBER} loksaieta/bankingwebapp:latest"
+				sh "docker tag loksaieta/bankingwebapp:${BUILD_NUMBER} amitbhattacharjee407-wq/bankingwebapp:latest"
             }
         }
         stage('Login to DockerHub') {
