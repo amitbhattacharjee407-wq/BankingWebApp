@@ -21,7 +21,7 @@ pipeline {
         stage('Application Image Build') {
             steps {
                 echo 'Perform Application Image Build'
-				sh "docker build -t loksaieta/bankingwebapp:${BUILD_NUMBER} ."
+				sh "docker build -t amitbhattacharjee407-wq/bankingwebapp:${BUILD_NUMBER} ."
 				sh "docker tag loksaieta/bankingwebapp:${BUILD_NUMBER} loksaieta/bankingwebapp:latest"
             }
         }
